@@ -1,0 +1,12 @@
+{
+  "extends": "@genexus/chameleon-integrations-typescript-config/tsconfig.json",
+  "compilerOptions": {
+    "declaration": false,
+    "experimentalDecorators": true,
+    "lib": ["DOM", "ES2022", "DOM.Iterable"],
+    "moduleResolution": "node",
+    "jsx": "react",
+    "jsxFactory": "h"
+  },
+  "include": ["src", "stencil.config.ts"]
+}
