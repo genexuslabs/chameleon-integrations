@@ -3,6 +3,10 @@ import {
   ChComboBoxRender,
   ChTreeViewRender,
 } from "../lib/components/stencil-generated";
+import {
+  ComboBoxModel,
+  TreeViewModel,
+} from "@genexus/chameleon-controls-library";
 
 const LandingPage = () => {
   const [controlUIModel] = useState<TreeViewModel>([
