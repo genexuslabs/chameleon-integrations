@@ -8,7 +8,7 @@ module.exports = {
   ],
   parserOptions: {
     ecmaVersion: 2022, // Allows for the parsing of modern ECMAScript features
-    project: "./packages/frontend/web-components/tsconfig.json",
+    project: "./packages/react-mercury/web-components/tsconfig.json",
     sourceType: "module" // Allows for the use of imports
   },
   rules: {
@@ -89,7 +89,7 @@ module.exports = {
     "@stencil-community/props-must-be-public": "warn", // This rule catches Stencil Props marked as private or protected
     "@stencil-community/props-must-be-readonly": "error", // This rule catches Stencil Props marked as non readonly, excluding mutable ones
     "@stencil-community/required-jsdoc": "error", // This rule catches Stencil Props, Methods and Events to define jsdoc
-    "@stencil-community/required-prefix": ["error", ["gx-eai-"]], // Ensures that a Component's tag use the "gx-eai-" prefix.
+    "@stencil-community/required-prefix": ["error", ["gl-"]], // Ensures that a Component's tag use the "gl-" prefix.
     "@stencil-community/reserved-member-names": "warn", // Ensures that any of reserved global HTML attribute names are used as @Prop or @Method
     "@stencil-community/single-export": "error", // This rule catches modules that expose more than just the Stencil Component itself
     "@stencil-community/strict-boolean-conditions": "off",
