@@ -7,8 +7,6 @@ import {
 import ChComboBoxRender from "../chameleon-wrappers/ChComboBoxRender";
 import ChTreeViewRender from "../chameleon-wrappers/ChTreeViewRender";
 
-import { getControlRegisterProperty } from "@genexus/chameleon-controls-library/dist/collection";
-
 const MODULE_ICON = getIconPathExpanded(
   {
     category: "objects",
