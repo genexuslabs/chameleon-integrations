@@ -2,6 +2,7 @@
   "name": "@genexus/chameleon-integrations-web-components",
   "version": "0.0.1",
   "description": "...",
+  "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.js",
@@ -16,9 +17,7 @@
   ],
   "prettier": "@genexus/chameleon-integrations-prettier-config",
   "scripts": {
-    "build": "stencil build",
-    "build.docs": "stencil build --dev --docs",
-    "build.react": "stencil build --docs",
+    "build": "stencil build --docs",
     "generate": "stencil generate",
     "prettier": "prettier src/**/*.{tsx,ts,jsx,js,css,json,md} --write",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",
@@ -31,17 +30,17 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@genexus/chameleon-controls-library": "6.0.0-next.37"
+    "@genexus/chameleon-controls-library": "file:///D:/GitHub/chameleon"
   },
   "devDependencies": {
     "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",
     "@genexus/chameleon-integrations-typescript-config": "file:..\\..\\config\\typescript",
     "@stencil-community/eslint-plugin": "~0.7.2",
     "@stencil/core": "~4.16.0",
-    "@stencil/react-output-target": "^0.5.3",
+    "@stencil/react-output-target": "~0.7.1",
     "@stencil/sass": "~3.0.12",
-    "@types/jest": "~29.5.12",
-    "@types/node": "^20.16.3",
+    "@types/jest": "~29.5.13",
+    "@types/node": "^22.5.5",
     "@typescript-eslint/eslint-plugin": "~6.20.0",
     "@typescript-eslint/parser": "~6.20.0",
     "eslint": "~8.56.0",
@@ -54,7 +53,7 @@
     "jest-cli": "~29.7.0",
     "lint-staged": "~15.2.10",
     "prettier": "~2.8.8",
-    "puppeteer": "~23.3.0",
+    "puppeteer": "~23.4.0",
     "typescript": "~5.4.5"
   },
   "lint-staged": {
