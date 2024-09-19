@@ -51,12 +51,12 @@ export default defineConfig({
     // Print bundle summary
     summary({
       // Each bundle
-      warnHigh: 100000, // RED >= 100KB
-      warnLow: 30000, // GREEN < 30KB,
+      warnHigh: 120000, // RED >= 120KB
+      warnLow: 55000, // GREEN < 55KB,
 
       // Bundle summary
-      totalHigh: 400000, // RED >= 400KB
-      totalLow: 200000, // GREEN < 200KB,
+      totalHigh: 600000, // RED >= 600KB
+      totalLow: 250000, // GREEN < 250KB,
 
       // Different compress methods
       showGzippedSize: true,
