@@ -7,12 +7,12 @@ import { viteStaticCopy } from "vite-plugin-static-copy";
 
 export default defineConfig({
   server: {
-    fs: { strict: false }
+    fs: { strict: false },
   },
 
   esbuild: {
-    drop: ["console", "debugger"], // Removes console and debugger statements
-    format: "esm"
+    // drop: ["console", "debugger"], // Removes console and debugger statements
+    format: "esm",
   },
 
   build: {
@@ -21,7 +21,7 @@ export default defineConfig({
 
     // rollupOptions: {
     //   output: {
-        
+
     //   }
     // }
   },
@@ -33,9 +33,9 @@ export default defineConfig({
       targets: [
         {
           src: "node_modules/@genexus/mercury/dist/assets",
-          dest: "./assets/"
-        }
-      ]
+          dest: "./assets",
+        },
+      ],
     }),
 
     // Minify JS
@@ -44,8 +44,8 @@ export default defineConfig({
       module: true,
       compress: true,
       format: {
-        comments: false // TODO: Check if we can do this due to license
-      }
+        comments: false, // TODO: Check if we can do this due to license
+      },
     }),
 
     // Print bundle summary
@@ -60,7 +60,7 @@ export default defineConfig({
 
       // Different compress methods
       showGzippedSize: true,
-      showBrotliSize: true
-    })
-  ]
+      showBrotliSize: true,
+    }),
+  ],
 });
