@@ -1,12 +1,24 @@
 import { useState } from "react";
-import {
-  ChComboBoxRender,
-  ChTreeViewRender,
-} from "../lib/components/stencil-generated";
+import { getIconPath, getIconPathExpanded } from "@genexus/mercury";
 import {
   ComboBoxModel,
   TreeViewModel,
 } from "@genexus/chameleon-controls-library";
+import ChComboBoxRender from "../chameleon-wrappers/ChComboBoxRender";
+import ChTreeViewRender from "../chameleon-wrappers/ChTreeViewRender";
+
+import { getControlRegisterProperty } from "@genexus/chameleon-controls-library/dist/collection";
+
+const MODULE_ICON = getIconPathExpanded(
+  {
+    category: "objects",
+    name: "module",
+  },
+  {
+    category: "objects",
+    name: "module-open",
+  }
+);
 
 const LandingPage = () => {
   const [controlUIModel] = useState<TreeViewModel>([
@@ -16,7 +28,10 @@ const LandingPage = () => {
       editable: false,
       expanded: true,
       leaf: false,
-      startImgSrc: "showcase/pages/assets/icons/version.svg",
+      startImgSrc: getIconPath({
+        name: "version",
+        category: "objects",
+      }),
       startImgType: "img",
       dragDisabled: true,
       dropDisabled: true,
@@ -121,7 +136,7 @@ const LandingPage = () => {
           id: "Root_Module",
           caption: "Root Module",
           editable: false,
-          startImgSrc: "var(module)",
+          startImgSrc: MODULE_ICON,
           dragDisabled: true,
           lazy: false,
           order: 1,
@@ -132,7 +147,7 @@ const LandingPage = () => {
             {
               id: "Root_Module.AWS_internal",
               caption: "AWS_internal",
-              startImgSrc: "var(module)",
+              startImgSrc: MODULE_ICON,
               order: 1,
               expanded: false,
               indeterminate: false,
@@ -143,7 +158,7 @@ const LandingPage = () => {
             {
               id: "Root_Module.BL",
               caption: "BL",
-              startImgSrc: "var(module)",
+              startImgSrc: MODULE_ICON,
               order: 1,
               expanded: false,
               indeterminate: false,
@@ -154,7 +169,7 @@ const LandingPage = () => {
             {
               id: "Root_Module.General",
               caption: "General",
-              startImgSrc: "var(module)",
+              startImgSrc: MODULE_ICON,
               lazy: true,
               order: 1,
               expanded: false,
@@ -165,7 +180,7 @@ const LandingPage = () => {
             {
               id: "Root_Module.IDE",
               caption: "IDE",
-              startImgSrc: "var(module)",
+              startImgSrc: MODULE_ICON,
               order: 1,
               expanded: false,
               indeterminate: false,
@@ -449,7 +464,7 @@ const LandingPage = () => {
       ></ChComboBoxRender>
 
       <ChTreeViewRender
-        class="tree-view"
+        className="tree-view"
         model={controlUIModel}
       ></ChTreeViewRender>
     </div>

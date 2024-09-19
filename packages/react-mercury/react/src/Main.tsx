@@ -1,10 +1,9 @@
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-
-// Add Chameleon types
-import "@genexus/mercury/dist/bundles/css/all.css";
-
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
+
+// Mercury base CSS
+import "@genexus/mercury/dist/bundles/css/all.css";
 
 const router = createBrowserRouter([
   {
