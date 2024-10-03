@@ -13,6 +13,8 @@ export default defineConfig({
   esbuild: {
     // drop: ["console", "debugger"], // Removes console and debugger statements
     format: "esm",
+    target: "esnext",
+    legalComments: "none",
   },
 
   build: {
@@ -33,7 +35,7 @@ export default defineConfig({
       targets: [
         {
           src: "node_modules/@genexus/mercury/dist/assets",
-          dest: "./assets",
+          dest: "/",
         },
       ],
     }),
@@ -43,9 +45,9 @@ export default defineConfig({
       ecma: 2022 as 2020,
       module: true,
       compress: true,
-      format: {
-        comments: false, // TODO: Check if we can do this due to license
-      },
+      // format: {
+      //   comments: false, // TODO: Check if we can do this due to license
+      // },
     }),
 
     // Print bundle summary
