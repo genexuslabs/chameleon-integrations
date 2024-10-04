@@ -16,6 +16,7 @@
     "dist/"
   ],
   "prettier": "@genexus/chameleon-integrations-prettier-config",
+  "license": "Apache-2.0",
   "scripts": {
     "build": "stencil build --docs",
     "generate": "stencil generate",
@@ -28,7 +29,6 @@
     "validate.ci": "npm run lint && npm run build -- --max-workers 1 --debug",
     "prepare": "husky install"
   },
-  "license": "MIT",
   "dependencies": {
     "@genexus/chameleon-controls-library": "6.0.0-next.40"
   },

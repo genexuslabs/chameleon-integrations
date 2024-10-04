@@ -3,6 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "license": "Apache-2.0",
   "scripts": {
     "start": "pnpm build.css && vite --port 5200 --open",
     "build": "pnpm build.css && tsc && vite build",

@@ -2,7 +2,7 @@
   "name": "@genexus/chameleon-integrations-prettier-config",
   "version": "0.0.1",
   "description": "Prettier Config",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "prettier",
     "prettier-config"

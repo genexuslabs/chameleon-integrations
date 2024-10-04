@@ -2,7 +2,7 @@
   "name": "@genexus/chameleon-integrations-typescript-config",
   "version": "0.0.1",
   "description": "TypeScript Config",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "keywords": [
     "typescript"
   ],
