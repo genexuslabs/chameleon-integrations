@@ -30,7 +30,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@genexus/chameleon-controls-library": "6.0.0-next.39"
+    "@genexus/chameleon-controls-library": "6.0.0-next.40"
   },
   "devDependencies": {
     "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",

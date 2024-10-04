@@ -34,8 +34,16 @@ export default defineConfig({
     viteStaticCopy({
       targets: [
         {
-          src: "node_modules/@genexus/mercury/dist/assets",
-          dest: "/",
+          src: "node_modules/@genexus/mercury/dist/assets/icons/*",
+          dest: "./assets/icons/",
+        },
+        {
+          src: "node_modules/@genexus/mercury/dist/assets/fonts/*",
+          dest: "./assets/fonts/",
+        },
+        {
+          src: "src/assets/generated-bundles/*",
+          dest: "./assets/css",
         },
       ],
     }),

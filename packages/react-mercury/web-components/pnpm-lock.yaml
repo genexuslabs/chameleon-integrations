@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@genexus/chameleon-controls-library':
-        specifier: 6.0.0-next.39
-        version: 6.0.0-next.39(@stencil/core@4.16.0)
+        specifier: 6.0.0-next.40
+        version: 6.0.0-next.40(@stencil/core@4.16.0)
     devDependencies:
       '@genexus/chameleon-integrations-prettier-config':
         specifier: file:..\..\config\prettier
@@ -275,8 +275,8 @@ packages:
     resolution: {integrity: sha512-gMsVel9D7f2HLkBma9VbtzZRehRogVRfbr++f06nL2vnCGCNlzOD+/MUov/F4p8myyAHspEhVobgjpX64q5m6A==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@genexus/chameleon-controls-library@6.0.0-next.39':
-    resolution: {integrity: sha512-pG1dYYwfUibu7e/Jkig1TVqjjUiJ7t9T8YejegLT9beaFXmJXdAn9NY1irdXQzX4gX7nOUR04dxQXtIi6yAjmw==}
+  '@genexus/chameleon-controls-library@6.0.0-next.40':
+    resolution: {integrity: sha512-Um0OWU8oM+NhRiT4rT+nI3qmm5IfnU+p3O07oG0l6vgUdvHbJlnPz+PQjoxmWLol4SNxjEZs32ZlUJGogrjefw==}
 
   '@genexus/chameleon-integrations-prettier-config@file:../../config/prettier':
     resolution: {directory: ../../config/prettier, type: directory}
@@ -3071,7 +3071,7 @@ snapshots:
 
   '@eslint/js@8.56.0': {}
 
-  '@genexus/chameleon-controls-library@6.0.0-next.39(@stencil/core@4.16.0)':
+  '@genexus/chameleon-controls-library@6.0.0-next.40(@stencil/core@4.16.0)':
     dependencies:
       '@genexus/markdown-parser': 0.1.1
       html5-qrcode: 2.3.8
