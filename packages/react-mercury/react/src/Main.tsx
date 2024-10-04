@@ -3,7 +3,9 @@ import { createRoot } from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 
 // Mercury base CSS
-import "@genexus/mercury/dist/bundles/css/all.css";
+import "./assets/generated-bundles/base/base.css";
+import "./assets/generated-bundles/resets/box-sizing.css";
+import "./assets/generated-bundles/base/icons.css";
 
 const router = createBrowserRouter([
   {

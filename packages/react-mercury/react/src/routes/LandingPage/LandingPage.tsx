@@ -1,5 +1,6 @@
 import { useState } from "react";
 import {
+  getBundles,
   getIconPath,
   getIconPathExpanded,
   getTreeViewImagePathCallback,
@@ -7,6 +8,7 @@ import {
 import {
   AccordionModel,
   ComboBoxModel,
+  ThemeModel,
   TreeViewModel,
 } from "@genexus/chameleon-controls-library";
 import {
@@ -14,6 +16,7 @@ import {
   ChCheckbox,
   ChComboBoxRender,
   ChEdit,
+  ChTheme,
   ChTreeViewRender,
 } from "../../chameleon-wrappers";
 import "./LandingPage.scss";
@@ -28,6 +31,20 @@ const MODULE_ICON = getIconPathExpanded(
     category: "objects",
     name: "module-open",
   }
+);
+
+const CSS_BUNDLES: ThemeModel = getBundles(
+  [
+    "components/accordion",
+    "components/button",
+    "components/checkbox",
+    "components/combo-box",
+    "components/edit",
+    "components/tree-view",
+    "utils/form",
+    "utils/layout",
+  ],
+  "./assets/css/"
 );
 
 const LandingPage = () => {
@@ -347,123 +364,122 @@ const LandingPage = () => {
   ]);
 
   return (
-    <div className="lading-page spacing-body">
-      <ChTreeViewRender
-        className="tree-view lading-page__tree-view"
-        model={controlUIModel}
-        getImagePathCallback={getTreeViewImagePathCallback}
-        lazyLoadTreeItemsCallback={lazyLoadTreeItemsCallback}
-      ></ChTreeViewRender>
+    <>
+      <ChTheme model={CSS_BUNDLES}></ChTheme>
+      <div className="lading-page spacing-body">
+        <ChTreeViewRender
+          className="tree-view lading-page__tree-view"
+          model={controlUIModel}
+          getImagePathCallback={getTreeViewImagePathCallback}
+          lazyLoadTreeItemsCallback={lazyLoadTreeItemsCallback}
+        ></ChTreeViewRender>
 
-      <form action="" className="field-group lading-page__form">
-        <div className="field field-inline">
-          <div className="field field-block">
-            <label className="label" htmlFor="first-name">
-              First name
-            </label>
-            <ChEdit
-              id="first-name"
-              name="first-name"
-              autocapitalize="off"
-              autocomplete="off"
-              className="form-input"
-              maxLength={10}
-              mode="none"
-              placeholder="John"
-            ></ChEdit>
+        <form action="" className="field-group lading-page__form">
+          <div className="field field-inline">
+            <div className="field field-block">
+              <label className="label" htmlFor="first-name">
+                First name
+              </label>
+              <ChEdit
+                id="first-name"
+                name="first-name"
+                autocapitalize="off"
+                autocomplete="off"
+                className="form-input"
+                maxLength={10}
+                mode="none"
+                placeholder="John"
+              ></ChEdit>
+            </div>
+
+            <div className="field field-block">
+              <label className="label" htmlFor="last-name">
+                Last name
+              </label>
+              <ChEdit
+                id="last-name"
+                name="last-name"
+                className="form-input"
+                placeholder="Doe"
+              ></ChEdit>
+            </div>
           </div>
 
           <div className="field field-block">
-            <label className="label" htmlFor="last-name">
-              Last name
+            <label className="label" htmlFor="combo-box">
+              Country
             </label>
-            <ChEdit
-              id="last-name"
-              name="last-name"
-              autocapitalize="off"
-              autocomplete="off"
+            <ChComboBoxRender
+              id="combo-box"
+              accessibleName="Option"
+              className="combo-box lading-page__combo-box"
+              model={controlComboBoxUIModel}
+              placeholder="Select an option..."
+            ></ChComboBoxRender>
+          </div>
+
+          <div className="field field-block">
+            <ChCheckbox
+              className="checkbox"
+              caption="Option"
+              checkedValue="true"
+            ></ChCheckbox>
+          </div>
+
+          <button className="button-primary">Submit</button>
+        </form>
+
+        <ChAccordionRender
+          className="accordion-outlined lading-page__accordion"
+          model={controlAccordionUIModel}
+        >
+          <div slot="item 1">Content of the item 1</div>
+
+          <div slot="item 2">
+            Content of the item 2
+            <button className="button-primary" type="button">
+              Some action
+            </button>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rem
+              cum deleniti? Ullam sit saepe non laudantium dicta alias, corrupti
+              dolores rerum sint, maiores expedita esse, molestias modi
+              perspiciatis pariatur.
+            </div>
+            <div>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rem
+              cum deleniti? Ullam sit saepe non laudantium dicta alias, corrupti
+              dolores rerum sint, maiores expedita esse, molestias modi
+              perspiciatis pariatur.
+            </div>
+          </div>
+
+          <div slot="item 3">
+            Content of the item 3
+            <button className="button-secondary" type="button">
+              Some action
+            </button>
+          </div>
+
+          <div slot="item 4 header">
+            Custom header
+            <input
+              aria-label="Search"
               className="form-input"
-              maxLength={10}
-              mode="none"
-              placeholder="Doe"
-            ></ChEdit>
+              placeholder="Search..."
+              type="text"
+            />
           </div>
-        </div>
 
-        <div className="field field-block">
-          <label className="label" htmlFor="combo-box">
-            Country
-          </label>
-          <ChComboBoxRender
-            id="combo-box"
-            accessibleName="Option"
-            className="combo-box lading-page__combo-box"
-            model={controlComboBoxUIModel}
-            placeholder="Select an option..."
-          ></ChComboBoxRender>
-        </div>
-
-        <div className="field field-block">
-          <ChCheckbox
-            className="checkbox"
-            caption="Option"
-            checkedValue="true"
-          ></ChCheckbox>
-        </div>
-
-        <button className="button-primary">Submit</button>
-      </form>
-
-      <ChAccordionRender
-        className="accordion-outlined lading-page__accordion"
-        model={controlAccordionUIModel}
-      >
-        <div slot="item 1">Content of the item 1</div>
-
-        <div slot="item 2">
-          Content of the item 2
-          <button className="button-primary" type="button">
-            Some action
-          </button>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rem
-            cum deleniti? Ullam sit saepe non laudantium dicta alias, corrupti
-            dolores rerum sint, maiores expedita esse, molestias modi
-            perspiciatis pariatur.
+          <div slot="item 4">
+            Content of the item 4
+            <button className="button-tertiary" type="button">
+              Some action
+            </button>
           </div>
-          <div>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga rem
-            cum deleniti? Ullam sit saepe non laudantium dicta alias, corrupti
-            dolores rerum sint, maiores expedita esse, molestias modi
-            perspiciatis pariatur.
-          </div>
-        </div>
-
-        <div slot="item 3">
-          Content of the item 3
-          <button className="button-secondary" type="button">
-            Some action
-          </button>
-        </div>
-
-        <div slot="item 4 header">
-          Custom header
-          <input
-            aria-label="Search"
-            className="form-input"
-            placeholder="Search..."
-            type="text"
-          />
-        </div>
-
-        <div slot="item 4">
-          Content of the item 4
-          <button className="button-tertiary" type="button">
-            Some action
-          </button>
-        </div>
-      </ChAccordionRender>
-    </div>
+        </ChAccordionRender>
+      </div>
+    </>
   );
 };
 
