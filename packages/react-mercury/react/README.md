@@ -10,10 +10,14 @@ npm i pnpm -g
 
 ## Local development
 
-```bash
-pnpm i
-pnpm start
-```
+1. Ensure the web-components packages was previously build. Consult the [web-components Readme](./../web-components/README.md) if not.
+
+2. Run:
+
+   ```bash
+   pnpm i
+   pnpm start
+   ```
 
 ## Building the package
 
