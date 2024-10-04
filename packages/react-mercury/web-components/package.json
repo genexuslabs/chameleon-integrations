@@ -1,0 +1,62 @@
+{
+  "name": "@genexus/chameleon-integrations-web-components",
+  "version": "0.0.1",
+  "description": "...",
+  "type": "module",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "es2015": "dist/esm/index.js",
+  "es2017": "dist/esm/index.js",
+  "jsnext:main": "dist/esm/index.js",
+  "types": "./dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/chameleon-integrations-web-components/chameleon-integrations-web-components.esm.js",
+  "files": [
+    "dist/"
+  ],
+  "prettier": "@genexus/chameleon-integrations-prettier-config",
+  "scripts": {
+    "build": "stencil build --docs",
+    "generate": "stencil generate",
+    "prettier": "prettier src/**/*.{tsx,ts,jsx,js,css,json,md} --write",
+    "lint": "eslint src/**/*{.ts,.tsx} --fix",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "validate": "npm run lint && npm run test && npm run build",
+    "validate.ci": "npm run lint && npm run build -- --max-workers 1 --debug",
+    "prepare": "husky install"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@genexus/chameleon-controls-library": "6.0.0-next.40"
+  },
+  "devDependencies": {
+    "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",
+    "@genexus/chameleon-integrations-typescript-config": "file:..\\..\\config\\typescript",
+    "@stencil-community/eslint-plugin": "~0.7.2",
+    "@stencil/core": "~4.16.0",
+    "@stencil/react-output-target": "~0.5.3",
+    "@stencil/sass": "~3.0.12",
+    "@types/jest": "~29.5.13",
+    "@types/node": "^22.5.5",
+    "@typescript-eslint/eslint-plugin": "~6.20.0",
+    "@typescript-eslint/parser": "~6.20.0",
+    "eslint": "~8.56.0",
+    "eslint-config-prettier": "~8.8.0",
+    "eslint-plugin-local": "~1.0.0",
+    "eslint-plugin-prettier": "~4.2.1",
+    "eslint-plugin-react": "~7.33.2",
+    "husky": "~9.0.11",
+    "jest": "~29.7.0",
+    "jest-cli": "~29.7.0",
+    "lint-staged": "~15.2.10",
+    "prettier": "~2.8.8",
+    "puppeteer": "~23.4.0",
+    "typescript": "~5.4.5"
+  },
+  "lint-staged": {
+    "**/*": "prettier --write --ignore-unknown"
+  }
+}

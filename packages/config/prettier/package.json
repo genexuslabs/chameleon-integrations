@@ -1,0 +1,11 @@
+{
+  "name": "@genexus/chameleon-integrations-prettier-config",
+  "version": "0.0.1",
+  "description": "Prettier Config",
+  "license": "MIT",
+  "keywords": [
+    "prettier",
+    "prettier-config"
+  ],
+  "main": "index.json"
+}
