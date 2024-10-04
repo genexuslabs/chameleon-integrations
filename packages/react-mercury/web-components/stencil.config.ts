@@ -41,9 +41,16 @@ const commonCopyTasks = [
 const outputTargets: OutputTarget[] = generateReactOutput
   ? [
       reactOutputTarget({
-        stencilPackageName: "@genexus/chameleon-controls-library",
-        outDir: "../react/src/chameleon-wrappers",
-        esModules: true,
+        componentCorePackage: "@genexus/chameleon-controls-library",
+        proxiesFile: "../react/src/chameleon-wrappers/index.ts",
+        // esModules: true,
+
+        // All Web Components will automatically be registered with the Custom
+        // Elements Registry. This can only be used when lazy loading Web
+        // Components and will not work when includeImportCustomElements is true.
+        includeDefineCustomElements: true,
+        loaderDir: "loader",
+
         excludeComponents: reactOutputExcludedComponents,
         customElementsDir: "dist/components"
       }),

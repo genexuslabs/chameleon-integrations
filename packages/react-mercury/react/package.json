@@ -10,16 +10,15 @@
     "preview": "tsc && vite build && vite preview --port 5200 --open"
   },
   "dependencies": {
-    "@genexus/chameleon-controls-library": "file:///D:/GitHub/chameleon",
-    "@stencil/react-output-target": "~0.7.1",
     "react": "~18.3.1",
     "react-dom": "~18.3.1",
-    "react-router-dom": "~6.26.1"
+    "react-router-dom": "~6.26.2"
   },
   "devDependencies": {
+    "@genexus/chameleon-controls-library": "6.0.0-next.39",
     "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",
     "@genexus/chameleon-integrations-typescript-config": "file:..\\..\\config\\typescript",
-    "@genexus/mercury": "~0.8.7",
+    "@genexus/mercury": "~0.8.11",
     "@rollup/plugin-terser": "^0.4.4",
     "@types/node": "~22.5.5",
     "@types/react": "~18.3.7",

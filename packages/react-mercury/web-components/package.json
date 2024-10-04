@@ -30,14 +30,14 @@
   },
   "license": "MIT",
   "dependencies": {
-    "@genexus/chameleon-controls-library": "file:///D:/GitHub/chameleon"
+    "@genexus/chameleon-controls-library": "6.0.0-next.39"
   },
   "devDependencies": {
     "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",
     "@genexus/chameleon-integrations-typescript-config": "file:..\\..\\config\\typescript",
     "@stencil-community/eslint-plugin": "~0.7.2",
     "@stencil/core": "~4.16.0",
-    "@stencil/react-output-target": "~0.7.1",
+    "@stencil/react-output-target": "~0.5.3",
     "@stencil/sass": "~3.0.12",
     "@types/jest": "~29.5.13",
     "@types/node": "^22.5.5",
