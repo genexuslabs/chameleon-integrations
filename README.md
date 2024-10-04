@@ -1,10 +1,10 @@
-# Chameleon Control Library Samples
+# Chameleon Controls Library Samples
 
-Welcome to the Chameleon Control Library Samples repository! This repository contains various examples demonstrating how to effectively use the Chameleon Control Library in different frameworks and with different design systems.
+Welcome to the Chameleon Controls Library Samples repository! This repository contains various examples demonstrating how to effectively use the Chameleon Controls Library in different frameworks and with different design systems.
 
 ## Overview
 
-The [Chameleon Control Library](https://github.com/genexuslabs/chameleon-controls-library) provides a set of customizable UI components designed to work seamlessly with different design systems, including Mercury. This repository aims to showcase practical implementations, starting with integration examples for React.
+The [Chameleon Controls Library](https://github.com/genexuslabs/chameleon-controls-library) provides a set of customizable UI components designed to work seamlessly with different design systems, including Mercury. This repository aims to showcase practical implementations, starting with integration examples for React.
 
 ## Available Samples
 
