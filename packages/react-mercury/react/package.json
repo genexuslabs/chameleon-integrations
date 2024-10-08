@@ -15,7 +15,8 @@
     "react": "~18.2.0",
     "react-dom": "~18.2.0",
     "react-router-dom": "~6.26.2",
-    "@genexus/chameleon-controls-library": "6.0.0-next.40"
+    "@genexus/chameleon-controls-library": "6.0.0-next.40",
+    "@genexus/chameleon-integrations-web-components": "file:..\\web-components"
   },
   "devDependencies": {
     "@genexus/chameleon-integrations-prettier-config": "file:..\\..\\config\\prettier",

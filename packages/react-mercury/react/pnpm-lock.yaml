@@ -11,6 +11,9 @@ importers:
       '@genexus/chameleon-controls-library':
         specifier: 6.0.0-next.40
         version: 6.0.0-next.40(@stencil/core@4.21.0)
+      '@genexus/chameleon-integrations-web-components':
+        specifier: file:..\web-components
+        version: file:../web-components(@stencil/core@4.21.0)
       react:
         specifier: ~18.2.0
         version: 18.2.0
@@ -340,6 +343,9 @@ packages:
 
   '@genexus/chameleon-integrations-typescript-config@file:../../config/typescript':
     resolution: {directory: ../../config/typescript, type: directory}
+
+  '@genexus/chameleon-integrations-web-components@file:../web-components':
+    resolution: {directory: ../web-components, type: directory}
 
   '@genexus/markdown-parser@0.1.1':
     resolution: {integrity: sha512-mPWHAOekmjQ3C2V5N3GyUADW6gHuTRRj1ul5G2nxY+h09RwlNxVfYLUWCC4S20l0c6wQzHabgGf+nroyuZJjxw==}
@@ -1837,6 +1843,13 @@ snapshots:
   '@genexus/chameleon-integrations-prettier-config@file:../../config/prettier': {}
 
   '@genexus/chameleon-integrations-typescript-config@file:../../config/typescript': {}
+
+  '@genexus/chameleon-integrations-web-components@file:../web-components(@stencil/core@4.21.0)':
+    dependencies:
+      '@genexus/chameleon-controls-library': 6.0.0-next.40(@stencil/core@4.21.0)
+    transitivePeerDependencies:
+      - '@stencil/core'
+      - supports-color
 
   '@genexus/markdown-parser@0.1.1':
     dependencies:

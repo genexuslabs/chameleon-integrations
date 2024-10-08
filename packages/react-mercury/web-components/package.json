@@ -18,7 +18,8 @@
   "prettier": "@genexus/chameleon-integrations-prettier-config",
   "license": "Apache-2.0",
   "scripts": {
-    "build": "stencil build --docs",
+    "build": "stencil build --docs && pnpm build.extras",
+    "build.extras": "tsc --project tsconfig-collection.json",
     "generate": "stencil generate",
     "prettier": "prettier src/**/*.{tsx,ts,jsx,js,css,json,md} --write",
     "lint": "eslint src/**/*{.ts,.tsx} --fix",

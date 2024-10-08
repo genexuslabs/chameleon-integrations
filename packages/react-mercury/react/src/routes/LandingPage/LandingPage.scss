@@ -1,21 +1,6 @@
 .lading-page {
   display: grid;
-  grid-template: "tree form" 300px "accordion accordion" 1fr / 250px 1fr;
-  max-inline-size: 600px;
+  inline-size: 600px;
   justify-self: center;
   gap: var(--mer-spacing--sm);
-
-  &__tree {
-    grid-area: tree;
-  }
-
-  &__form {
-    grid-area: form;
-    display: grid;
-    grid-auto-rows: max-content;
-  }
-
-  &__accordion {
-    grid-area: accordion;
-  }
 }
